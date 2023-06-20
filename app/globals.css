@@ -19,12 +19,20 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-image: linear-gradient(347deg, #ff29004f 4% 4%, #fffff8 126% 126%);
-  background-image: 
-    linear-gradient(
-      347deg in oklab, 
-      oklch(71% 0.37 65 / 31%) 4% 4%, oklch(100% 0.01 105) 126% 126%
-    );
+  background-image: linear-gradient(
+    347deg in oklab,
+    oklch(71% 0.37 65 / 31%) 4% 4%,
+    oklch(100% 0.01 105) 126% 126%
+  );
 
   height: 100vh;
   height: 100dvh;
+}
+
+a {
+  text-decoration: underline;
+}
+
+nav a {
+  text-decoration: none;
 }

@@ -9,14 +9,12 @@ export default async function Post({
   const { html, title, date } = await getPostBySlug(slug);
 
   return (
-    <div className="container mx-auto">
-      <div className="w-full p-24">
-        <p className="text-2xl">{title}</p>
-        <div
-          dangerouslySetInnerHTML={{ __html: html }}
-          className={markdownStyles["markdown"]}
-        />
-      </div>
+    <div className="w-full ">
+      <p className="text-2xl">{title}</p>
+      <div
+        dangerouslySetInnerHTML={{ __html: html }}
+        className={markdownStyles["markdown"]}
+      />
     </div>
   );
 }

@@ -51,7 +51,6 @@ function getParser() {
 }
 
 export async function getPostBySlug(slug: string) {
-  console.log("Looking for post", slug);
   const realId = slug.replace(/\.md$/, "");
   const fullPath = join("posts", `${realId}.md`);
 

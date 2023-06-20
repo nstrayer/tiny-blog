@@ -3,17 +3,20 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <div>
-      <nav className="mx-auto">
-        <ul className="flex space-x-6 text-lg justify-end">
+      <nav className="px-6 py-2">
+        <ul className="flex text-lg justify-end align-baseline space-x-9">
+          <li className="mr-auto text-2xl decoration-wavy">
+            <NavLink href="/">Tiny-Blog</NavLink>
+          </li>
           <li>
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="/all">All Posts</NavLink>
           </li>
           <li>
             <NavLink href="/about">About</NavLink>
           </li>
           <li>
             <NavLink href="https://github.com/nstrayer/tiny-blog">
-              Github
+              Github ↗️
             </NavLink>
           </li>
         </ul>
