@@ -24,4 +24,7 @@ body {
       347deg in oklab, 
       oklch(71% 0.37 65 / 31%) 4% 4%, oklch(100% 0.01 105) 126% 126%
     );
+
+  height: 100vh;
+  height: 100dvh;
 }

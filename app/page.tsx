@@ -1,26 +1,34 @@
-import Image from "next/image";
-import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link";
+import PostPreview from "@/components/PostPreview";
+import { getAllPosts } from "@/lib/api-static";
 
-export default function Home() {
-  const allPostsData = getSortedPostsData();
+const NUM_RECENT_POSTS = 10;
 
+export default async function Home() {
+  const posts = await getAllPosts();
+  const recentPosts = posts.slice(0, NUM_RECENT_POSTS);
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
-
-      <h2 className="text-3xl">Tiny-Blog</h2>
       <section>
-        <h2 className="text-lg">Blog</h2>
-        <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id} className="my-3">
-              {title}
-              <br />
-              {id}
-              <br />
-              {String(date)}
-            </li>
+        <div className="space-y-4">
+          <h1 className="text-center text-4xl">Tiny-Blog</h1>
+        </div>
+        <div className="h-16"></div>
+        <p className="text-3xl mb-6">Recent Posts</p>
+        <div className="grid my-8 md:grid-cols-2 grid-cols-1 mx-auto md:gap-16 gap-7">
+          {recentPosts.map((post) => (
+            <div key={post.title}>
+              <PostPreview post={post} />
+            </div>
           ))}
-        </ul>
+        </div>
+        <div className="h-16"></div>
+        <Link
+          href="/all"
+          className="text-3xl hover:text-gray-300 hover:underline"
+        >
+          Read More{" ➡ "}
+        </Link>
       </section>
     </main>
   );
