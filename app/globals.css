@@ -16,17 +16,16 @@
   }
 }
 
+html {
+  background-image: linear-gradient(169deg, #fffff1 0%, #ffd16b 104% 104%);
+  background-image: linear-gradient(
+    169deg in oklab,
+    oklch(100% 0.02 109) 0%,
+    oklch(88% 0.13 85) 104% 104%
+  );
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: linear-gradient(347deg, #ff29004f 4% 4%, #fffff8 126% 126%);
-  background-image: linear-gradient(
-    347deg in oklab,
-    oklch(71% 0.37 65 / 31%) 4% 4%,
-    oklch(100% 0.01 105) 126% 126%
-  );
-
-  height: 100vh;
-  height: 100dvh;
 }
 
 a {
