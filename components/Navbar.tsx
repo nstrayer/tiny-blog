@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="px-6 py-2">
       <ul className="flex justify-end align-baseline flex-wrap gap-x-4 sm:text-xl">
         <li className="mr-auto text-xl sm:text-2xl">
-          <NavLink href="/">Tiny-Blog</NavLink>
+          <NavLink href="/">Boot and Shoe</NavLink>
         </li>
         <li>
           <NavLink href="/all">All Posts</NavLink>
