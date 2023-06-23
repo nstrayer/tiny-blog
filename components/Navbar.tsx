@@ -4,34 +4,22 @@ export default function Navbar() {
   return (
     <nav className="px-6 py-2">
       <ul className="flex justify-end align-baseline flex-wrap gap-x-4 sm:text-xl">
-        <li className="mr-auto text-xl sm:text-2xl">
-          <NavLink href="/">Boot and Shoe</NavLink>
-        </li>
-        <li>
-          <NavLink href="/all">All Posts</NavLink>
-        </li>
-        <li>
-          <NavLink href="/about">About</NavLink>
-        </li>
-        <li>
-          <NavLink href="https://github.com/nstrayer/tiny-blog">
-            Github ↗️
-          </NavLink>
-        </li>
+        {[
+          ["/", "Home"],
+          ["/all", "All Posts"],
+          ["/about", "About"],
+          ["https:://github.com/nstrayer/tiny-blog", "Github ↗"],
+        ].map(([href, text]) => {
+          return (
+            <li
+              key={text}
+              className="rounded-pill px-3 py-1 hover:shadow-md hover:bg-orange-600 hover:text-white"
+            >
+              <Link href={href}>{text}</Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
 }
-
-type NavLink = {
-  href: string;
-  children: React.ReactNode;
-};
-
-const NavLink = ({ href, children }: NavLink) => {
-  return (
-    <Link className="hover:text-gray-300 hover:underline" href={href}>
-      {children}
-    </Link>
-  );
-};
