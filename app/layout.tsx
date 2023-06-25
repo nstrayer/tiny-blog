@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`${font.className} p-3 bg-fancy dark:bg-dark bg-fixed text-slate-900 dark:text-slate-100`}
       >
         <Navbar />
-        <div className="min-h-screen max-w-prose mx-auto my-8 px-3 md:px-5">
+        <div className="min-h-screen max-w-prose mx-auto my-10 md:my-16 px-5 md:px-10">
           {children}
         </div>
       </body>
