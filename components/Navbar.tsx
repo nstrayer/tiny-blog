@@ -4,8 +4,10 @@ export default function Navbar() {
   return (
     <nav className="px-6 py-2">
       <ul className="flex justify-end align-baseline flex-wrap gap-x-4 sm:text-xl">
+        <li className="px-3 py-1 mr-auto hover:underline text-2xl">
+          <Link href="/">Boot & Shoe</Link>
+        </li>
         {[
-          ["/", "Home"],
           ["/all", "All Posts"],
           ["/about", "About"],
           ["https:://github.com/nstrayer/tiny-blog", "Github ↗"],
