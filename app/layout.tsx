@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import Head from "next/head";
+import { gradient_light, gradient_dark } from "../tailwind.config.js";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -16,6 +18,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: dark)"
+          content={`"${gradient_dark}"`}
+        />
+        <meta
+          name="theme-color"
+          media="(prefers-color-scheme: light)"
+          content={`"${gradient_light}"`}
+        />
+      </Head>
       <body
         className={`${font.className} bg-light dark::bg-dark bg-hexagons dark:bg-hexagons-dark bg-fixed text-slate-900 dark:text-slate-100`}
       >

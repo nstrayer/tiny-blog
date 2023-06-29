@@ -1,9 +1,9 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 
-const gradient_light = `oklch(100% 0.03 95 / 74%)`;
+export const gradient_light = `oklch(100% 0.03 95 / 74%)`;
 const gradient_light_center = `oklch(67% 0.21 77 / 43%)`;
-const gradient_dark = `oklch(3% 0.03 95 / 98%)`;
+export const gradient_dark = `oklch(3% 0.03 95 / 98%)`;
 const gradient_dark_center = `oklch(42% 0.48 238 / 43%)`;
 
 const make_gradient = (center, outer) => `radial-gradient(
