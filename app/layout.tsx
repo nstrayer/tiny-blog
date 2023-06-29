@@ -11,8 +11,8 @@ export const metadata = {
   description:
     "A blog about the nuts and bolts of programmings along with the philosophy.",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: gradient_light },
-    { media: "(prefers-color-scheme: dark)", color: gradient_dark },
+    { media: "(prefers-color-scheme: light)", color: "#fffee8" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0909" },
   ],
 };
 
