@@ -1,5 +1,28 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
+
+const gradient_light = `oklch(100% 0.03 95 / 74%)`;
+const gradient_light_center = `oklch(67% 0.21 77 / 43%)`;
+const gradient_dark = `oklch(3% 0.03 95 / 98%)`;
+const gradient_dark_center = `oklch(42% 0.48 238 / 43%)`;
+
+const make_gradient = (center, outer) => `radial-gradient(
+  farthest-corner circle at 75% 82% in oklab, 
+  ${center} -16% -16%, 4%, 
+  ${outer} 105% 105%
+)`;
+
+
+const make_bg_pattern = (fill, opacity) =>  `url(
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='${fill}' fill-opacity='${opacity}'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+const fancy_gradient = make_gradient(gradient_light_center, gradient_light);
+const fancy_gradient_dark = make_gradient(gradient_dark_center, gradient_dark);
+
+
+const hexagon_bg  = make_bg_pattern(gradient_light, 0.8);
+const hexagon_bg_dark  = make_bg_pattern(gradient_dark, 0.1);
+
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -20,8 +43,8 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'fancy-fallback': 'linear-gradient(169deg, #fffff1 0%, #ffd16b 104% 104%)',
-        'fancy': 'linear-gradient(152deg in oklab, oklch(100% 0 82) -7% -7%, oklch(100% 0.15 68) 100%)',
-        'dark': 'linear-gradient(152deg in oklab, oklch(4% 0.00 82) -7% -7%, oklch(33% 0.05 244) 122% 122%)'
+        "hexagons": `${hexagon_bg}, ${fancy_gradient}`,
+        "hexagons-dark": `${hexagon_bg_dark}, ${fancy_gradient_dark}`,
       },
       borderRadius: {
         'none': '0',

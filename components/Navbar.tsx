@@ -80,20 +80,29 @@ function NavButtonClose() {
     </svg>
   );
 }
+
+const links: [link: string, title: string, is_external?: boolean][] = [
+  ["/all", "All Posts"],
+  ["/about", "About"],
+  ["https://github.com/nstrayer/tiny-blog", "Github ↗", true],
+];
+
 function NavLinks() {
   return (
     <>
-      {[
-        ["/all", "All Posts"],
-        ["/about", "About"],
-        ["https:://github.com/nstrayer/tiny-blog", "Github ↗"],
-      ].map(([href, text]) => {
+      {links.map(([href, text, is_external]) => {
         return (
           <li
             key={text}
             className="rounded-pill px-3 py-1 hover:shadow-md hover:bg-orange-600 hover:text-white"
           >
-            <Link href={href}>{text}</Link>
+            {is_external ? (
+              <a href={href} target={"_blank"} rel={"noreferrer"}>
+                {text}
+              </a>
+            ) : (
+              <Link href={href}>{text}</Link>
+            )}
           </li>
         );
       })}
