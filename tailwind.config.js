@@ -47,6 +47,8 @@ module.exports = {
         "hexagons-dark": `${hexagon_bg_dark}, ${fancy_gradient_dark}`,
       },
       colors: {
+        "dark": gradient_dark,
+        "light": gradient_light,
         "main": {
           "50": "#FFFBEA",
           "100": "#FFF3C4",
