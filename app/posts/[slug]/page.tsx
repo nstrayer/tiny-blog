@@ -9,11 +9,11 @@ export default async function Post({
   const { html, title, date } = await getPostBySlug(slug);
 
   return (
-    <div className="w-full prose">
+    <div className="w-full prose dark:prose-invert">
       <p className="text-2xl">{title}</p>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
-        className="prose-sm md:prose lg:prose-lg"
+        className="prose-sm dark:prose-invert md:prose dark:md:prose-invert lg:prose-lg dark:lg:prose-invert"
       />
     </div>
   );

@@ -17,10 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} p-3 bg-hexagons dark:bg-hexagons bg-fixed text-slate-900 dark:text-slate-100`}
+        className={`${font.className} bg-hexagons dark:bg-hexagons-dark bg-fixed text-slate-900 dark:text-slate-100`}
       >
         <Navbar />
-        <div className="min-h-screen max-w-prose mx-auto my-10 md:my-16 px-5 md:px-10">
+        <div className="min-h-screen max-w-prose mx-auto my-6 md:my-10 px-6 md:px-10">
           {children}
         </div>
       </body>

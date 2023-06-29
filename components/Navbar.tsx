@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="px-6 py-2 flex align-baseline">
-      <Link className="px-3 py-1 mr-auto hover:underline text-2xl" href="/">
+    <nav className="px-6 py-2 md:py-6 flex align-baseline  dark:text-gray-50 shadow-md dark:border-b-2 dark:border-b-slate-500">
+      <Link className="py-1 mr-auto hover:underline text-2xl" href="/">
         Boot & Shoe
       </Link>
       <CollapsingMenu />
