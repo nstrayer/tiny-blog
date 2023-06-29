@@ -82,7 +82,7 @@ function NavButtonClose() {
 }
 
 const links: [link: string, title: string, is_external?: boolean][] = [
-  ["/all", "All Posts"],
+  // ["/all", "All Posts"],
   ["/about", "About"],
   ["https://github.com/nstrayer/tiny-blog", "Github ↗", true],
 ];

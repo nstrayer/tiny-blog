@@ -19,12 +19,12 @@ export default async function Home() {
           ))}
         </div>
         <div className="h-16"></div>
-        <Link
+        {/* <Link
           href="/all"
           className="text-3xl hover:text-gray-300 hover:underline"
         >
           Read More{" ➡ "}
-        </Link>
+        </Link> */}
       </section>
     </main>
   );
