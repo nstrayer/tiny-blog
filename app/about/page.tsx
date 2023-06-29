@@ -1,11 +1,36 @@
+import Image from "next/image";
+
+function AuthorImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <Image
+      src={src}
+      width={250}
+      height={250 * (5 / 4)}
+      alt={alt}
+      className="rounded-md flex-initial max-w-full min-w-0 my-0"
+    />
+  );
+}
+
 export default function About() {
   return (
-    <div className="flex min-h-screen flex-col gap-3">
+    <div className="min-h-screen max-w-prose prose lg:prose-xl">
       <p>
         Hi I&apos;m Nick. I write{" "}
         <a href="https://posit.co/">open-source software</a> for a living from a
         shed in my Michigan backyard.
       </p>
+
+      <div className="flex justify-around gap-3">
+        <AuthorImage
+          src="/with-cat.jpeg"
+          alt="Picture of the author with his cat in the garden"
+        />
+        <AuthorImage
+          src="/in-shed.jpeg"
+          alt="Picture of the author in his shed"
+        />
+      </div>
 
       <p>
         In my professional existance I primarily write in Typescript, Python,

@@ -9,4 +9,6 @@ This blogs purpose is to be be an outlet for the little tips and tricks I pick u
 While I primarily blog for my benefit, I hope that the stuff I write may be of some value to you the reader! 
 
 Happy coding!
-- Nick
+
+
+*Nick*
