@@ -11,8 +11,8 @@ export const metadata = {
   description:
     "A blog about the nuts and bolts of programmings along with the philosophy.",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fffee8" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0909" },
+    { media: "(prefers-color-scheme: light)", color: "#fff7da" },
+    { media: "(prefers-color-scheme: dark)", color: "#190061" },
   ],
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} bg-light dark::bg-dark bg-hexagons dark:bg-hexagons-dark bg-fixed text-slate-900 dark:text-slate-100`}
+        className={`${font.className} bg-stone-50 dark:bg-stone-900 dark:text-stone-50`}
       >
         <Navbar />
         <div className="min-h-screen max-w-prose mx-auto my-6 md:my-10 px-7 md:px-10">

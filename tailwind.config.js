@@ -3,13 +3,13 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 export const gradient_light = `oklch(100% 0.03 95 / 74%)`;
 const gradient_light_center = `oklch(67% 0.21 77 / 43%)`;
-export const gradient_dark = `oklch(3% 0.03 95 / 98%)`;
-const gradient_dark_center = `oklch(42% 0.48 238 / 43%)`;
+export const gradient_dark = `oklch(3% 0.40 222)`;
+const gradient_dark_center = `oklch(3% 0.50 313)`;
 
 const make_gradient = (center, outer) => `radial-gradient(
-  farthest-corner circle at 75% 82% in oklab, 
-  ${center} -16% -16%, 4%, 
-  ${outer} 105% 105%
+  farthest-corner ellipse at 0% 0% in oklab, 
+  ${outer} 0%, 
+  ${center} 100%
 )`;
 
 
@@ -20,7 +20,7 @@ const fancy_gradient_dark = make_gradient(gradient_dark_center, gradient_dark);
 
 
 const hexagon_bg  = make_bg_pattern(gradient_light, 0.8);
-const hexagon_bg_dark  = make_bg_pattern(gradient_dark, 0.1);
+const hexagon_bg_dark  = make_bg_pattern(gradient_dark, 0.8);
 
 
 /** @type {import('tailwindcss').Config} */
