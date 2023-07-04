@@ -8,6 +8,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
+
 import rehypeShiki from "@leafac/rehype-shiki";
 import * as shiki from "shiki";
 import { parseISO } from "date-fns";
@@ -20,12 +21,12 @@ let p: ReturnType<typeof getParserPre> | undefined;
 async function getParserPre() {
   return unified()
     .use(remarkParse)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true })
     .use(remarkGfm)
     .use(rehypeShiki, {
       highlighter: await shiki.getHighlighter({ theme: "poimandres" }),
     })
-    .use(rehypeStringify)
+    .use(rehypeStringify, { allowDangerousHtml: true })
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, {
       content: (arg) => ({
