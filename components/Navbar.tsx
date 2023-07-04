@@ -2,15 +2,14 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="px-6 py-2 md:py-6 flex align-baseline  dark:text-gray-50 shadow-md bg-light dark::bg-dark bg-hexagons dark:bg-hexagons-dark bg-fixed text-slate-900">
+    <nav className="px-6 py-2 md:py-6 flex align-baseline dark:text-gray-50 bg-light dark:bg-slate-950 bg-hexagons dark:bg-circuit-dark bg-fixed text-slate-900">
       <Link className="py-1 mr-auto hover:underline text-2xl" href="/">
         Boot & Shoe
       </Link>
-      <CollapsingMenu />
-      <ul
-        id="nav-links"
-        className="hidden align-baseline flex-wrap flex-col gap-x-4 sm:text-xl target:flex sm:flex sm:flex-row"
-      >
+      <div className="sm:hidden pt-1.5">
+        <CollapsingMenu />
+      </div>
+      <ul className="hidden sm:flex align-baseline gap-x-4 text-xl">
         <NavLinks />
       </ul>
     </nav>
@@ -19,7 +18,7 @@ export default function Navbar() {
 
 function CollapsingMenu() {
   return (
-    <div className="sm:hidden pt-1.5">
+    <>
       <input type="checkbox" id="nav-toggle" className="peer hidden" />
       <label
         htmlFor="nav-toggle"
@@ -33,13 +32,10 @@ function CollapsingMenu() {
       >
         <NavButtonClose />
       </label>
-      <ul
-        id="nav-links"
-        className="align-baseline flex-wrap flex-col gap-x-4 sm:text-xl target:flex sm:flex sm:flex-row h-0 overflow-hidden peer-checked:h-fit"
-      >
+      <ul className="align-baseline flex-wrap flex-col gap-x-4 target:flex sm:flex sm:flex-row h-0 overflow-hidden peer-checked:h-fit">
         <NavLinks />
       </ul>
-    </div>
+    </>
   );
 }
 
