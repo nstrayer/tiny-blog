@@ -9,8 +9,8 @@ export default async function Post({
   const { html, title, date } = await getPostBySlug(slug);
 
   return (
-    <div className="w-full prose dark:prose-invert">
-      <p className="text-2xl">{title}</p>
+    <div className="w-full prose prose-stone dark:prose-invert">
+      <h2>{title}</h2>
       <div
         dangerouslySetInnerHTML={{ __html: html }}
         className="prose-sm dark:prose-invert md:prose dark:md:prose-invert lg:prose-lg dark:lg:prose-invert"

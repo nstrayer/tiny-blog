@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="px-6 py-2 md:py-6 flex align-baseline dark:text-gray-50 bg-light dark:bg-slate-950 bg-hexagons dark:bg-circuit-dark bg-fixed text-slate-900">
+    <nav className="px-6 py-2 md:py-6 flex align-baseline shadow-md shadow-stone-200 bg-fixed dark:border-b-2 dark:border-slate-700 dark:shadow-none">
       <Link className="py-1 mr-auto hover:underline text-2xl" href="/">
         Boot & Shoe
       </Link>

@@ -14,7 +14,7 @@ function AuthorImage({ src, alt }: { src: string; alt: string }) {
 
 export default function About() {
   return (
-    <div className="min-h-screen max-w-prose prose dark:prose-invert lg:prose-xl">
+    <div className="min-h-screen max-w-prose prose-stone dark:prose-invert lg:prose-xl">
       <p>
         Hi I&apos;m Nick. I write{" "}
         <a href="https://posit.co/">open-source software</a> for a living from a
