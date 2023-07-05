@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="px-6 py-2 md:py-6 flex align-baseline shadow-md shadow-stone-200 bg-fixed dark:border-b-2 dark:border-slate-700 dark:shadow-none">
+    <nav className="px-6 py-2 md:py-6 flex items-center shadow-md shadow-stone-200 bg-fixed dark:border-b-2 dark:border-slate-700 dark:shadow-none">
       <Link
         className="py-1 mr-auto hover:underline text-2xl flex gap-2 items-center group hover:drop-shadow-md"
         href="/"
@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="sm:hidden pt-1.5">
         <CollapsingMenu />
       </div>
-      <ul className="hidden sm:flex align-baseline gap-x-4 text-xl">
+      <ul className="hidden sm:flex items-baseline gap-x-4 text-xl">
         <NavLinks />
       </ul>
     </nav>
