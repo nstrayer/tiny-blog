@@ -1,9 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
     <nav className="px-6 py-2 md:py-6 flex align-baseline shadow-md shadow-stone-200 bg-fixed dark:border-b-2 dark:border-slate-700 dark:shadow-none">
-      <Link className="py-1 mr-auto hover:underline text-2xl" href="/">
+      <Link
+        className="py-1 mr-auto hover:underline text-2xl flex gap-2 items-center group hover:drop-shadow-md"
+        href="/"
+      >
+        <Image
+          src="/boot-and-shoe-logo.png"
+          height={40}
+          width={40}
+          alt="A cat's feet with one white boot and one white shoe"
+          className="group-hover:rotate-3 transition-transform duration-150 ease-in-out"
+        />
         Boot & Shoe
       </Link>
       <div className="sm:hidden pt-1.5">

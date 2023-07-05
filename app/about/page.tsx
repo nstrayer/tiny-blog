@@ -14,7 +14,7 @@ function AuthorImage({ src, alt }: { src: string; alt: string }) {
 
 export default function About() {
   return (
-    <div className="min-h-screen max-w-prose prose-stone dark:prose-invert lg:prose-xl">
+    <div className="min-h-screen max-w-prose prose prose-stone dark:prose-invert lg:prose-xl">
       <p>
         Hi I&apos;m Nick. I write{" "}
         <a href="https://posit.co/">open-source software</a> for a living from a
@@ -52,6 +52,14 @@ export default function About() {
           Lucy D&apos;Agostino McGowan:
         </a>{" "}
         <a href="https://livefreeordichotomize.com/">LiveFreeOrDichotomize.</a>
+      </p>
+
+      <h3>The name</h3>
+      <p>
+        &ldquo;Boot and Shoe&rdquo; refers to the two front feet of my cat. One
+        foot has a &ldquo;boot&rdquo; where the white goes a ways up his leg,
+        and the other is a &ldquo;shoe&rdquo; where the white goes just above
+        his paw.
       </p>
 
       <p>Happy coding!</p>
