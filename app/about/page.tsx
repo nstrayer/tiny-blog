@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SocialLinks } from "../../components/SocialLinks";
 
 function AuthorImage({ src, alt }: { src: string; alt: string }) {
   return (
@@ -61,6 +62,9 @@ export default function About() {
         and the other is a &ldquo;shoe&rdquo; where the white goes just above
         his paw.
       </p>
+
+      <h3>Social links</h3>
+      <SocialLinks include_text />
 
       <p>Happy coding!</p>
     </div>

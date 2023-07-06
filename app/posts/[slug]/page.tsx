@@ -1,3 +1,4 @@
+import { SocialLinks } from "@/components/SocialLinks";
 import markdownStyles from "./markdown-styles.module.css";
 import { getAllPosts, getPostBySlug } from "@/lib/api-static";
 
@@ -15,6 +16,13 @@ export default async function Post({
         dangerouslySetInnerHTML={{ __html: html }}
         className="prose-sm dark:prose-invert md:prose dark:md:prose-invert lg:prose-lg dark:lg:prose-invert"
       />
+      <div className="flex items-baseline justify-center gap-4 mt-5 pt-2 border-t">
+        <span className="-translate-y-1">Find me here:</span>
+        <SocialLinks
+          className="flex  gap-4 list-none justify-center h-auto m-0 p-0"
+          include_text={false}
+        />
+      </div>
     </div>
   );
 }
