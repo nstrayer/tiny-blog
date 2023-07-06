@@ -69,7 +69,8 @@ export async function getPostBySlug(slug: string) {
 
   return {
     ...data,
-    title: data.title,
+    title: (data.title ?? "Untitled") as string,
+    description: (data.description ?? "") as string,
     slug: realId,
     date,
     html: html.value.toString(),

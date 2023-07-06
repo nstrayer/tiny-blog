@@ -1,5 +1,6 @@
 ---
-title: 'Growing to appreciate Tailwind as a skeptic'
+title: "Tailwind: the beauty of ugly code"
+description: How the ugly and verbose utility classes of the tailwind css framework help you write maintainable and understandable code
 date: '2023-07-04'
 ---
 

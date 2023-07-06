@@ -1,5 +1,6 @@
 ---
 title: 'Hello!'
+description: An introduction to this blog and what I hope you (and I) get out of it
 date: '2023-06-19'
 ---
 

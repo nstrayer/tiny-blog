@@ -18,7 +18,6 @@ export default async function Home() {
             </div>
           ))}
         </div>
-        <div className="h-16"></div>
         {/* <Link
           href="/all"
           className="text-3xl hover:text-gray-300 hover:underline"
