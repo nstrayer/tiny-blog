@@ -11,7 +11,7 @@ export default async function Home() {
     <main>
       <section>
         <p className="text-3xl mb-6">Recent Posts</p>
-        <div className="grid my-8 md:grid-cols-2 grid-cols-1 mx-auto md:gap-16 gap-7">
+        <div className="grid my-8 grid-cols-1 mx-auto gap-7">
           {recentPosts.map((post) => (
             <div key={post.title}>
               <PostPreview post={post} />
